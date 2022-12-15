@@ -1,0 +1,12 @@
+undefined | 2022-12-15 18:52:14 error: create connection pool failed.. : ConnectionError: 사용자 'HANKANGSU'이(가) 로그인하지 못했습니다.
+undefined | 2022-12-15 18:53:38 error: create connection pool failed.. : ConnectionError: 사용자 'HANKANGSU_NODE_USER'이(가) 로그인하지 못했습니다.
+undefined | 2022-12-15 18:55:54 error: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".
+undefined | 2022-12-15 18:55:54 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_BUY_LIST'.
+undefined | 2022-12-15 18:55:54 error: callProcedureSync failed
+undefined | 2022-12-15 18:55:54 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_SELL_LIST'.
+undefined | 2022-12-15 18:55:54 error: callProcedureSync failed
+undefined | 2022-12-15 18:57:41 error: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".
+undefined | 2022-12-15 18:57:41 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_BUY_LIST'.
+undefined | 2022-12-15 18:57:41 error: callProcedureSync failed
+undefined | 2022-12-15 18:57:42 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_SELL_LIST'.
+undefined | 2022-12-15 18:57:42 error: callProcedureSync failed

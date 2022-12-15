@@ -1,0 +1,65 @@
+undefined | 2022-12-15 18:52:14 error: create connection pool failed.. : ConnectionError: 사용자 'HANKANGSU'이(가) 로그인하지 못했습니다.
+undefined | 2022-12-15 18:53:38 error: create connection pool failed.. : ConnectionError: 사용자 'HANKANGSU_NODE_USER'이(가) 로그인하지 못했습니다.
+undefined | 2022-12-15 18:55:53 info: URL : /
+undefined | 2022-12-15 18:55:53 info: Create a key attempt : lZYt8KRdUfyPvJa6xUqE_x12ZI-JyKl0
+undefined | 2022-12-15 18:55:54 info: URL : /api/common/getCoinRate
+undefined | 2022-12-15 18:55:54 error: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".
+undefined | 2022-12-15 18:55:54 info: URL : /api/list/buyList
+undefined | 2022-12-15 18:55:54 info: start decryptAll..
+undefined | 2022-12-15 18:55:54 info: callProcedureSync start - SP_BUY_LIST
+undefined | 2022-12-15 18:55:54 info: NAME : SNAME, VALUE :  
+undefined | 2022-12-15 18:55:54 info: NAME : STAN_COIN, VALUE : KRW
+undefined | 2022-12-15 18:55:54 info: NAME : QGUBUN, VALUE : 0
+undefined | 2022-12-15 18:55:54 info: NAME : TORDER, VALUE : 0
+undefined | 2022-12-15 18:55:54 info: NAME : ORDER, VALUE : 0
+undefined | 2022-12-15 18:55:54 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_BUY_LIST'.
+undefined | 2022-12-15 18:55:54 error: callProcedureSync failed
+undefined | 2022-12-15 18:55:54 info: URL : /api/list/sellList
+undefined | 2022-12-15 18:55:54 info: start decryptAll..
+undefined | 2022-12-15 18:55:54 info: callProcedureSync start - SP_SELL_LIST
+undefined | 2022-12-15 18:55:54 info: NAME : SNAME, VALUE :  
+undefined | 2022-12-15 18:55:54 info: NAME : STAN_COIN, VALUE : KRW
+undefined | 2022-12-15 18:55:54 info: NAME : QGUBUN, VALUE : 0
+undefined | 2022-12-15 18:55:54 info: NAME : TORDER, VALUE : 0
+undefined | 2022-12-15 18:55:54 info: NAME : ORDER, VALUE : 0
+undefined | 2022-12-15 18:55:54 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_SELL_LIST'.
+undefined | 2022-12-15 18:55:54 error: callProcedureSync failed
+undefined | 2022-12-15 18:57:41 info: URL : /
+undefined | 2022-12-15 18:57:41 info: URL : /api/common/getCoinRate
+undefined | 2022-12-15 18:57:41 error: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".
+undefined | 2022-12-15 18:57:41 info: URL : /api/list/buyList
+undefined | 2022-12-15 18:57:41 info: start decryptAll..
+undefined | 2022-12-15 18:57:41 info: callProcedureSync start - SP_BUY_LIST
+undefined | 2022-12-15 18:57:41 info: NAME : SNAME, VALUE :  
+undefined | 2022-12-15 18:57:41 info: NAME : STAN_COIN, VALUE : KRW
+undefined | 2022-12-15 18:57:41 info: NAME : QGUBUN, VALUE : 0
+undefined | 2022-12-15 18:57:41 info: NAME : TORDER, VALUE : 0
+undefined | 2022-12-15 18:57:41 info: NAME : ORDER, VALUE : 0
+undefined | 2022-12-15 18:57:41 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_BUY_LIST'.
+undefined | 2022-12-15 18:57:41 error: callProcedureSync failed
+undefined | 2022-12-15 18:57:42 info: URL : /api/list/sellList
+undefined | 2022-12-15 18:57:42 info: start decryptAll..
+undefined | 2022-12-15 18:57:42 info: callProcedureSync start - SP_SELL_LIST
+undefined | 2022-12-15 18:57:42 info: NAME : SNAME, VALUE :  
+undefined | 2022-12-15 18:57:42 info: NAME : STAN_COIN, VALUE : KRW
+undefined | 2022-12-15 18:57:42 info: NAME : QGUBUN, VALUE : 0
+undefined | 2022-12-15 18:57:42 info: NAME : TORDER, VALUE : 0
+undefined | 2022-12-15 18:57:42 info: NAME : ORDER, VALUE : 0
+undefined | 2022-12-15 18:57:42 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_SELL_LIST'.
+undefined | 2022-12-15 18:57:42 error: callProcedureSync failed
+undefined | 2022-12-15 19:02:41 info: URL : /
+undefined | 2022-12-15 19:26:51 info: URL : /
+undefined | 2022-12-15 19:26:51 info: Create a key attempt : 2V3jlIJkWCSm2IXskhWFsjWqA2_QmHqZ
+undefined | 2022-12-15 19:29:56 info: URL : /
+undefined | 2022-12-15 19:33:33 info: URL : /
+undefined | 2022-12-15 19:36:34 info: URL : /
+undefined | 2022-12-15 19:37:25 info: URL : /
+undefined | 2022-12-15 19:37:25 info: Create a key attempt : ArQ5I67QQSeQS3p6g5-QeQgqHcJ_8Am5
+undefined | 2022-12-15 19:38:43 info: URL : /
+undefined | 2022-12-15 19:38:43 info: Create a key attempt : iBkvS-TU1cfDYdvHzRJQLt7Yze0hYqfs
+undefined | 2022-12-15 19:45:53 info: URL : /
+undefined | 2022-12-15 19:46:18 info: URL : /
+undefined | 2022-12-15 19:48:17 info: URL : /
+undefined | 2022-12-15 19:48:54 info: URL : /
+undefined | 2022-12-15 19:49:15 info: URL : /
+undefined | 2022-12-15 19:51:57 info: URL : /
