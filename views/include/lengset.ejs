@@ -1,0 +1,19 @@
+<div id="langset">
+  <div class="appmenutitle">
+    <h3 class="tx-c"><%=LANG['LANG20']%></h3>
+    <a class="close"><i class="fas fa-times"></i></a>
+  </div>
+  <ul>
+    <li><a onclick="langChange('0')">한국어</a></li>
+    <li><a onclick="langChange('1')">English</a></li>
+    <li><a onclick="langChange('2')">汉语</a></li>
+    <li><a onclick="langChange('3')">日本語</a></li>
+  </ul>
+</div>
+<script>
+  function langChange(val) {
+    if (val) {
+      api.langChange(val)
+    }
+  }
+</script>

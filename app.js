@@ -19,6 +19,7 @@ const sessionStore = commonLib.getSessionStore();
 const csrf = require('csurf');
 
 const indexRouter = require('./routes/index');
+const coinApiRouter = require('./routes/coinApi');
 const commonRouter = require('./routes/common');
 const listRouter = require('./routes/list');
 const usersRouter = require('./routes/users');
@@ -114,6 +115,7 @@ app.use(
   })
 );
 
+app.use('/', coinApiRouter);
 app.use('/', indexRouter);
 app.use('/api/user', usersRouter);
 app.use('/api/common', commonRouter);
@@ -141,6 +143,16 @@ express.response.render = function (view, options, callback) {
   } else {
     options['LOGIN'] = req.session.userInfo['LOGIN'];
     options['D_UID'] = req.session.userInfo['D_UID'];
+    options['GTAC_ADDR'] = req.session.userInfo['GTAC_ADDR'];
+    options['GTAC_ADDR_QR'] = req.session.userInfo['GTAC_ADDR_QR'];
+    options['TK_ADDR'] = req.session.userInfo['TK_ADDR'];
+    options['TK_ADDR_QR'] = req.session.userInfo['TK_ADDR_QR'];
+    options['BTC_ADDR'] = req.session.userInfo['BTC_ADDR'];
+    options['BTC_ADDR_QR'] = req.session.userInfo['BTC_ADDR_QR'];
+    options['ETH_ADDR'] = req.session.userInfo['ETH_ADDR'];
+    options['ETH_ADDR_QR'] = req.session.userInfo['ETH_ADDR_QR'];
+    options['LTC_ADDR'] = req.session.userInfo['LTC_ADDR'];
+    options['LTC_ADDR_QR'] = req.session.userInfo['LTC_ADDR_QR'];
     options['IMAGE_URL'] = env.IMAGE_URL;
   }
   options['LANG'] = lang[req.session.num];

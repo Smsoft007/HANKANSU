@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <% include ./include/head %>
+
   <body>
     <div class="login_wrap">
       <div>
@@ -9,25 +10,30 @@
           <article class="welcome">
             <h2>환영합니다</h2>
             <h3>보건관리자 전용<br />현장 보건관리 업무</h3>
-            <div class="login">
-              <input type="text" placeholder="아이디" />
-              <input type="text" placeholder="비밀번호" />
+            <div class="flex login">
+              <input type="text" value="" name="D_UID" id="D_UID" autocomplete="off"  placeholder="아이디" />
+              <input class="w-10" type="password" name="D_PASS" id="D_PASS" placeholder="비밀번호" autocomplete="off"
+               onkeyup="enterkey()" />
               <label class="checkbox">
-                <input type="checkbox" name="" id="" /><i></i>아이디 저장
+                <input type="checkbox"  /><i></i>아이디 저장
               </label>
-              <div class="btns">
-                <button type="button">로그인</button>
-                <button type="button" class="btn_white">신규가입요청</button>
+
+                  로그인
+                </button>
+
+                <div class="btns">
+                  <button type="button" onclick="signin()">로그인</button>
+                  <button type="button" class="btn_white">신규가입요청</button>
               </div>
+           
             </div>
           </article>
           <article class="notice">
             <h4>공지사항</h4>
             <ul>
-              <li>
-                <a href="#a">2022년 특수검진 비용 수가 고시</a
-                ><span>2022.12.06</span>
-              </li>
+              <div  id = "noticeList">
+                </div>
+              
               <li>
                 <a href="#a">2022년 춘계 직업환경의학회 학회 일정</a
                 ><span>2022.12.05</span>
@@ -54,74 +60,182 @@
                 <a href="#a">개인정보처리방침 개정 공지</a
                 ><span>2022.09.02</span>
               </li>
-              <li><a href="#a">기타 등등</a><span>2022.08.15</span></li>
+              <li><a href="#a">기타 등등</a><span>2022.08.15</span></li> 
             </ul>
           </article>
           <article class="calendar">
-            <h4>
-              출장검진일정
-              <div class="month">2022.12</div>
-            </h4>
+            <h4>출장검진일정<div class="month">2022.12</div></h4>
             <table>
-              <tr>
-                <th>일</th>
-                <th>월</th>
-                <th>화</th>
-                <th>수</th>
-                <th>목</th>
-                <th>금</th>
-                <th>토</th>
-              </tr>
-              <tr>
-                <td><span>1</span></td>
-                <td><span>2</span></td>
-                <td><span>3</span></td>
-                <td><span>4</span></td>
-                <td><span>5</span></td>
-                <td><span>6</span></td>
-                <td><span>7</span></td>
-              </tr>
-              <tr>
-                <td><span>8</span></td>
-                <td><span>9</span></td>
-                <td><span>10</span></td>
-                <td><span>11</span></td>
-                <td><span>12</span></td>
-                <td><span>13</span></td>
-                <td><span>14</span></td>
-              </tr>
-              <tr>
-                <td><span>15</span></td>
-                <td class="on"><span>16</span></td>
-                <td><span>17</span></td>
-                <td><span>18</span></td>
-                <td><span>19</span></td>
-                <td><span>20</span></td>
-                <td><span>21</span></td>
-              </tr>
-              <tr>
-                <td><span>22</span></td>
-                <td><span>23</span></td>
-                <td><span>24</span></td>
-                <td><span>25</span></td>
-                <td><span>26</span></td>
-                <td><span>27</span></td>
-                <td><span>28</span></td>
-              </tr>
-              <tr>
-                <td><span>29</span></td>
-                <td><span>30</span></td>
-                <td><span>31</span></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+                <tr>
+                    <th>일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                </tr>
+                <tr>
+                    <td><span>1</span></td>
+                    <td><span>2</span></td>
+                    <td><span>3</span></td>
+                    <td><span>4</span></td>
+                    <td><span>5</span></td>
+                    <td><span>6</span></td>
+                    <td><span>7</span></td>
+                </tr>
+                <tr>
+                    <td><span>8</span></td>
+                    <td><span>9</span></td>
+                    <td><span>10</span></td>
+                    <td><span>11</span></td>
+                    <td><span>12</span></td>
+                    <td><span>13</span></td>
+                    <td><span>14</span></td>
+                </tr>
+                <tr>
+                    <td><span>15</span></td>
+                    <td class="on"><span>16</span></td>
+                    <td><span>17</span></td>
+                    <td><span>18</span></td>
+                    <td><span>19</span></td>
+                    <td><span>20</span></td>
+                    <td><span>21</span></td>
+                </tr>
+                <tr>
+                    <td><span>22</span></td>
+                    <td><span>23</span></td>
+                    <td><span>24</span></td>
+                    <td><span>25</span></td>
+                    <td><span>26</span></td>
+                    <td><span>27</span></td>
+                    <td><span>28</span></td>
+                </tr>
+                <tr>
+                    <td><span>29</span></td>
+                    <td><span>30</span></td>
+                    <td><span>31</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
             </table>
-          </article>
+        </article>
+          <!-- <div id="wrap" class="calendar">
+            <!-- 드래그 박스 -->
+            <!-- <div id="external-events"> -->
+              <!-- <h4>Draggable Events</h4> -->
+              <!-- <div id="external-events-list"></div>
+            </div> -->
+            <!-- calendar 태그 -->
+            <!-- <div id="calendar-wrap">
+              <div id="calendar1"></div>
+            </div>
+          </div>  -->
+        
         </section>
         <% include ./include/footer %>
       </div>
     </div>
   </body>
 </html>
+<script src="include/js/cur.js"></script>
+
+<script>
+  $(document).ready(function () {
+    
+    //init();
+    //getMainNotice();
+  });
+
+  function enterkey() {
+    if (window.event.keyCode == 13) {
+      signin()
+    }
+  }
+
+  //Todo center bindValue
+  //async function init() {
+  // const centerList = await api.listApi("/getCenterList")
+  //  centerList.data.forEach(el => $("#D_CENCODE").append('<option value="' + el.C_ID + '">' + el.C_NAME + '</option>'))
+
+  // }
+
+  async function signin() {
+    let BROWSER = commonLib.getBrowserInfo();
+    let D_OS = commonLib.getOSInfo();
+    let Is_APP = commonLib.isApp();
+    var CENTER;
+
+    console.log(BROWSER)
+    console.log(D_OS)
+    console.log(Is_APP)
+
+    const param = {
+      D_UID: $("#D_UID").val(),
+      D_PASS: $("#D_PASS").val(),
+      D_BROWSER: BROWSER,
+      D_OS: D_OS || ' ',
+      IS_APP: Is_APP || ' ',
+      CENTER: CENTER || ' '
+
+    }
+
+
+    console.log(param);
+    if  ($("#D_UID").val() === undefined) {
+        alert('회원아이디를 입력해주세요!')
+        return
+    }
+    if  ($("#D_PASS").val()=== undefined) {
+        alert('비밀번호를 입력해주세요!')
+        return
+    }
+    if (commonLib.nullCheck(param)) {
+      alert("아이디 또는 비밀번호를 입력해주세요!")
+      return
+    }
+
+    const r = await api.userApi("/signin", param)
+    console.log(r);
+    console.log(r.SIGNIN);
+
+    if (r.data.RESULT === 0) {
+      console.log(r.data.RESULT);
+      location.href = "/main"
+    } else if (r.data.RESULT == 1) {
+      alert("아이디를 확인하여 주십시오!")
+    } else if (r.data.RESULT == 2) {
+      alert("비밀번호를 확인하여 주십시오!")
+    } else if (r.data.RESULT == 3) {
+      alert("비밀번호 또는 아이디가 맞지 않습니다.")
+    } else if (r.data.RESULT == 4) {
+      alert("비밀번호 또는 아이디가 맞지 않습니다.")
+    } else if (r.data.RESULT == 5) {
+      alert("관리자 권한이 없습니다.")
+    }
+  }
+
+  // function getMainNotice(){
+  //   const param= {}
+  //   param[SECHER_TEXT] =" "		 //NVARCHAR(50)=,	//-- 게시판 검색 텍스트
+	//   param[SEARCH1_TITLE]= "1"  //		NVARCHAR(1),	//-- 게시판 검색 구분자
+	//   param[B_GUBUN]="USER",	   //-- 게시판구분 NOTICE : 공지사항 , USER :  1:1 게시판
+	//   param[D_SDATE]=" "	       //  -- 조회시작일
+  //   param[D_EDATE]= " "	,      //  -- 조회종료일
+  //   param[CUR_PAGING]=1,       //    -- 현재페이지번호
+  //   param[PAGING_NO]= 10       //   -- PAGEING_SIZE = 10  
+    
+  //   api.listApi("/MainboardList", param).then(r => {
+  //     for (let i = 0; i < r.data.length; i++) {
+  //       const board = r.data[i]
+  //       let innerHtml = '';
+  //       innerHtml += '<li>';
+  //       innerHtml += ' <a href="#a">'+brard.B.TITLE+'</a><span>'+brard.B_DATE+'</span>'; 
+  //       innerHtml += '</li>'; 
+  //       $("#noticeList").append(innerHtml)
+  //     }
+  //   })
+  // }
+</script>

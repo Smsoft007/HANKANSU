@@ -690,12 +690,12 @@ table tr:hover {
 }
 .paging a.first,
 .paging a.last {
-  background: url(../img/ico_arrowD.png) no-repeat center center;
+  background: url(/img/ico_arrowD.png) no-repeat center center;
   font-size: 0;
 }
 .paging a.prev,
 .paging a.next {
-  background: url(../img/ico_arrow.png) no-repeat center center;
+  background: url(/img/ico_arrow.png) no-repeat center center;
   font-size: 0;
 }
 .paging a.next,
@@ -743,7 +743,7 @@ table tr:hover {
 .popup .btn_close {
   width: 25px;
   height: 25px;
-  background: transparent url(../img/ico_close.png) no-repeat;
+  background: transparent url(/img/ico_close.png) no-repeat;
   border: 0;
   font-size: 0;
 }

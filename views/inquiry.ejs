@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+
+<% include ./include/head %>
+
+<body>
+
+  <div class="maintop subhead">
+    <% include ./include/header %>
+  </div>
+
+  <section>
+    <div class="contents">
+      <div class="maintitlebox tx-c">
+        <h3><%=LANG["LANG17"] %></h3>
+      </div>
+      <div class="contbox">
+        <div class="row mb-15">
+          <div class="left">
+            <a href="/inquiry-write" class="btn btn-primary btn-radius"><%=LANG["LANG79"] %></a>
+          </div>
+        </div>
+        <div class="tablebox tablehover">
+          <div class="theadbox">
+            <div class="d-flex">
+              <div class="th w10p"><%=LANG["LANG83"] %></div>
+              <div class="th w55p"><%=LANG["LANG58"] %></div>
+              <div class="th w15p"><%=LANG["LANG84"] %></div>
+              <div class="th w20p"><%=LANG["LANG85"] %></div>
+            </div>
+          </div>
+          <div class="tbodybox" id = "noticeList">
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <% include ./include/footer %>
+  <% include ./include/menu %>
+  <% include ./include/lengset %>
+
+
+
+</body>
+
+
+</html>
+
+
+<script src="include/js/cur.js"></script>
+<script>
+
+  $(document).ready(function () {
+      getNotice();
+    });
+    function getNotice() {
+      const param = {}
+      param["B_GUBUN"] = "USER";
+      param["D_SDATE"] = " ";
+      param["D_EDATE"] = " ";
+      param["CNT"] = "true";
+      param["CUR_PAGING"] = "1";
+      param["PAGING_NO"] = "10";
+      param["MY_NOTICE"] = "1";
+      api.listApi("/boardList", param).then(r => {
+        if(r.data.length == 0){
+          let innerHtml = '';
+          innerHtml += '<div class="d-flex tr">';
+          innerHtml += '<div class="td w100p tx-c"><%=LANG["LANG86"] %></div>'; 
+          innerHtml += '</div>';
+          $("#noticeList").append(innerHtml)
+        }
+        for (let i = 0; i < r.data.length; i++) {
+          const board = r.data[i]
+          let innerHtml = '';
+          innerHtml += '<a class="d-flex tr" href="inquiry-view?idx=' + board.B_IDX + '&type=USER">';
+          innerHtml += '<div class="td w10p"><span><%=LANG["LANG83"] %></span><span>' + board.ROWNUMBER + '</span></div>'; 
+          innerHtml += '<div class="td w55p"><span><%=LANG["LANG58"] %></span><span>' + board.B_TITLE + '</span></div>'; 
+          if(board.B_DEPTH > 0)
+            innerHtml += '<div class="td w15p"><span><%=LANG["LANG84"] %></span><span class="tx-primary"><%=LANG["LANG88"] %></span></div>';  
+          else 
+            innerHtml += '<div class="td w15p"><span><%=LANG["LANG84"] %></span><span class="tx-red"><%=LANG["LANG87"] %></span></div>';  
+          innerHtml += '<div class="td w20p"><span><%=LANG["LANG85"] %></span><span>' + board.B_IDATE + '</span></div>'; 
+          innerHtml += '</a>';
+          $("#noticeList").append(innerHtml)
+        }
+      })
+    }
+</script>

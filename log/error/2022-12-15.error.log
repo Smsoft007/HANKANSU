@@ -10,3 +10,24 @@ undefined | 2022-12-15 18:57:41 error: executeProcedure failed : RequestError: C
 undefined | 2022-12-15 18:57:41 error: callProcedureSync failed
 undefined | 2022-12-15 18:57:42 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_SELL_LIST'.
 undefined | 2022-12-15 18:57:42 error: callProcedureSync failed
+undefined | 2022-12-15 20:12:30 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:13:59 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:14:34 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:15:06 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:15:56 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:17:11 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:19:09 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:19:48 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:21:38 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:22:14 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:23:28 error: Cannot read properties of undefined (reading 'set')
+undefined | 2022-12-15 20:28:20 error: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".
+undefined | 2022-12-15 20:28:20 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_BUY_LIST'.
+undefined | 2022-12-15 20:28:20 error: callProcedureSync failed
+undefined | 2022-12-15 20:28:20 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_SELL_LIST'.
+undefined | 2022-12-15 20:28:20 error: callProcedureSync failed
+undefined | 2022-12-15 20:31:21 error: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "undefined".
+undefined | 2022-12-15 20:31:21 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_BUY_LIST'.
+undefined | 2022-12-15 20:31:21 error: callProcedureSync failed
+undefined | 2022-12-15 20:31:21 error: executeProcedure failed : RequestError: Could not find stored procedure 'SP_SELL_LIST'.
+undefined | 2022-12-15 20:31:21 error: callProcedureSync failed

@@ -1,0 +1,85 @@
+<header class="webhead">
+  <div class="topbar">
+    <div class="contents">
+      <div class="row">
+        <ul class="topbarlist right">
+          <% if(LOGIN){ %>
+            <li><a onclick="signout()"><%=LANG['LANG05']%></a></li>
+            <% } else {%>
+              <li><a href="/signin"><%=LANG['LANG06']%></a></li>
+              <% }%>
+                <li><a href="/mypage"><%=LANG['LANG07']%></a></li>
+                <li class="lang">
+                  <a href="#">Language</a>
+                  <div class="langbox">
+                    <ul>
+                      <li><a onclick="langChange('0')">한국어</a></li>
+                      <li><a onclick="langChange('1')">English</a></li>
+                      <li><a onclick="langChange('2')">汉语</a></li>
+                      <li><a onclick="langChange('3')">日本語</a></li>
+                    </ul>
+                  </div>
+                </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="mainbar">
+    <div class="contents">
+      <div class="row">
+        <div class="left">
+          <a href="/index" class="h-logo"><img src="img/logo-w.png" alt="Global Bit Block logo" /></a>
+        </div>
+        <div class="right">
+          <ul class="mainmenu">
+            <li>
+              <a href="#"><%=LANG['LANG08']%></a>
+              <ul class="dropmenu">
+                <li><a href="/purchase"><%=LANG['LANG09']%></a></li>
+                <li><a href="/sale"><%=LANG['LANG10']%></a></li>
+                <li><a href="/mytrade"><%=LANG['LANG11']%></a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><%=LANG['LANG12']%></a>
+              <ul class="dropmenu">
+                <li><a href="/assets"><%=LANG['LANG13']%></a></li>
+                <li><a href="/wallet"><%=LANG['LANG14']%></a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><%=LANG['LANG15']%></a>
+              <ul class="dropmenu">
+                <li><a href="/notice"><%=LANG['LANG16']%></a></li>
+                <li><a href="/inquiry"><%=LANG['LANG17']%></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<header class="apphead">
+  <div class="apptopbar">
+    <div class="row">
+      <div class="left">
+        <a class="btn-appmenu"><i class="fas fa-bars"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  async function signout() {
+    await api.userApi("/signout")
+    alert("<%=LANG['LANG18']%>!")
+    location.href = '/'
+  }
+  function langChange(val) {
+    if (val) {
+      api.langChange(val)
+    }
+  }
+
+</script>

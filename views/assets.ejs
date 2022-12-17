@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+
+<% include ./include/head %>
+
+<body>
+
+  <div class="maintop subhead">
+    <% include ./include/header %>
+  </div>
+
+  <section>
+    <div class="contents">
+      <div class="maintitlebox tx-c">
+        <h3><%=LANG['LANG13']%></h3>
+        <!-- <p>a;lskfjklsajdhglkjsdadhfkljasdhfjk</p> -->
+      </div>
+      <div class="contbox">
+
+        <div class="tablebox">
+          <div class="theadbox">
+            <div class="d-flex">
+              <div class="th w10p"><%=LANG['LANG23']%></div>
+              <div class="th w20p"><%=LANG['LANG24']%></div>
+              <div class="th w20p"><%=LANG['LANG25']%></div>
+              <div class="th w20p"><%=LANG['LANG26']%></div>
+              <div class="th w20p"><%=LANG['LANG27']%></div>
+              <div class="th w10p"><%=LANG['LANG08']%></div>
+            </div>
+          </div>
+          <div class="tbodybox" id="coinList">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <% include ./include/footer %>
+  <% include ./include/menu %>
+  <% include ./include/lengset %>
+
+
+</body>
+
+
+</html>
+
+
+<script src="include/js/cur.js"></script>
+<script>
+  $(document).ready(function(){
+    init()
+  });
+
+  async function init(){
+    $("#coinList").empty()
+    const coinRateInfo = await api.commonApi("/getCoinRate",null,false)
+    
+    api.listApi("/getCoinBalance").then(r => {
+      for(let i = 0;i<r.data.length;i++) {
+        const coinData = r.data[i];
+        const coinRate = coinRateInfo.data[coinData.SNAME] || 1200
+        let innerHtml = '';
+        innerHtml += '<div class="d-flex tr">';
+        innerHtml += '<div class="td w10p"><span><%=LANG["LANG23"] %></span><span>'+coinData.SNAME+'</span></div>';
+        innerHtml += '<div class="td w20p"><span><%=LANG["LANG24"] %></span><span>1 '+coinData.SNAME+' = '+coinRate+' USD</span></div>';
+        innerHtml += '<div class="td w20p"><span><%=LANG["LANG25"] %></span><span>'+coinData.AMT+'</span></div>';
+        innerHtml += '<div class="td w20p"><span><%=LANG["LANG26"] %></span><span>'+coinData.AMT_PS+'</span></div>';
+        innerHtml += '<div class="td w20p"><span><%=LANG["LANG27"] %></span><span>'+coinData.AMT_WT+'</span></div>';
+        innerHtml += '<div class="td w10p"><a href="/wallet?coin='+coinData.SNAME+'&addryn='+coinData.ADDR_YN+'" class="btn btn-s btn-primary btn-radius"><%=LANG["LANG14"] %></a></div>'; 
+        innerHtml += '</div>';
+        $("#coinList").append(innerHtml)
+      }
+    })
+  }
+</script>

@@ -1,0 +1,53 @@
+<!-- 팝업 -->
+<div class="popup_wrap">
+  <div class="popup">
+    <div class="pop_header">
+      <p class="tit">건강검진 사전조사 등록</p>
+      <button type="button" class="btn_close">닫기</button>
+    </div>
+    <div class="pop_content">
+      <div class="row">
+        <label>
+          이름
+          <input type="text" name="" id="" />
+        </label>
+        <label>
+          생년월일
+          <input type="text" name="" id="" />
+        </label>
+      </div>
+      <div class="row">
+        <label>
+          휴대폰
+          <input type="text" name="" id="" />
+        </label>
+        <label>
+          요청일
+          <input type="date" name="" id="" />
+        </label>
+      </div>
+      <div class="row">
+        <label>
+          작업내용
+          <input type="text" name="" id="" />
+        </label>
+        <label>
+          작업내용
+          <input type="text" name="" id="" />
+        </label>
+      </div>
+    </div>
+    <div class="btns align_center">
+      <button type="button">등록</button>
+      <button type="button" class="btn_white">취소</button>
+    </div>
+  </div>
+</div>
+<script>
+  const btnClose = document.querySelector('.btn_close');
+  btnClose.closest('.popup_wrap');
+  btnClose.addEventListener('click', function (e) {
+    let target = e.target.closest('.popup_wrap');
+    target.style.display = 'none';
+  });
+</script>

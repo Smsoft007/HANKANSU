@@ -1,0 +1,20 @@
+<div class="coinlistbox">
+    <div class="contents">
+        <ul class="d-flex">
+            <li class="active"><a><%=LANG['LANG01']%></a></li>
+            <li><a><img src="img/CTAG.png" alt="">GTAC<br><span>1200</span></a></li>
+            <li><a><img src="img/tk.png" alt="">TEC COIN<br><span>1200</span></a></li>
+            <li><a><img src="img/BTC.png" alt="">Bitcoin<br><span id="BTC"></span></a></li>
+            <li><a><img src="img/ETH.png" alt="">Ethereum<br><span id="ETH"></span></a></li>
+            <li><a><img src="img/LTC.png" alt="">Litecoin<br><span id="LTC"></span></a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        api.commonApi("/getCoinRate", null, false).then(r => {
+            commonLib.bindValue(r.data);
+        })
+    });
+</script>

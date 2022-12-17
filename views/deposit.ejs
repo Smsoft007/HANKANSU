@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+  
+<% include ./include/head %>
+
+<body>
+
+  <div class="maintop subhead">
+    <% include ./include/header %>
+  </div>
+
+  <section>
+    <div class="contents">
+      <div class="maintitlebox tx-c">
+        <h3><%=LANG['LANG08']%></h3>
+      </div>
+      <div class="contbox">
+        <div class="form800box">
+
+          <div class="invoicebox">
+            <div class="invoicetop">
+              <div class="row">
+                <div class="w50p left">
+                  <img src="img/logo-w.png" alt="">
+                </div>
+                <div class="w50p left">
+                  <p class="tx-r tx-w tx-small"><%=LANG['LANG28']%> : <span id ="TDNO"></span></p>
+                  <p class="tx-r tx-w tx-small"><%=LANG['LANG29']%> : <span id ="T_IDATE"></span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="invoicecont">
+              <div class="row tr">
+                <div class="left">
+                  <%=LANG['LANG30']%>
+                </div>
+                <div class="right">
+                  <b id="C_IUID"></b>
+                </div>
+              </div>
+              <div class="row tr">
+                <div class="left">
+                  <%=LANG['LANG40']%>
+                </div>
+                <div class="right">
+                  <b id="T_QTY"></b> <span name="T_SNAME"></span>
+                </div>
+              </div>
+              <div class="row tr">
+                <div class="left">
+                  <%=LANG['LANG41']%>
+                </div>
+                <div class="right">
+                  <b id="T_RATE"></b> <span name="T_STAN_SNAME"></span>
+                </div>
+              </div>
+              <div class="row tr">
+                <div class="left">
+                  <%=LANG['LANG42']%>
+                </div>
+                <div class="right">
+                  <b id="T_AMT"></b> <span name="T_STAN_SNAME"></span>
+                </div>
+              </div>
+              <div class="row tr">
+                <div class="left">
+                  <%=LANG['LANG43']%>
+                </div>
+                <div class="right">
+                  <b id="B_NAME"></b>
+                </div>
+              </div>
+              <div class="row tr" id = "sell_addr">
+                <div class="left">
+                  <%=LANG['LANG44']%>
+                </div>
+                <div class="right">
+                  <b id="ADDR"></b>
+                </div>
+              </div>
+              <div class="row tr" id = "sell_owner">
+                <div class="left">
+                  <%=LANG['LANG45']%>
+                </div>`
+                <div class="right">
+                  <b id="B_OWNER"></b>
+                </div>
+              </div>
+
+              <div id="reciptDiv" class="row tr" style="display:none;">
+                <div class="left">
+                  <%=LANG['LANG213']%>
+                </div>
+                <div class="right">
+                  <a href="#" class="btn btn-grey btn-s btn-radius btn-deposit"><%=LANG['LANG59']%></a>
+                </div>
+              </div>
+
+              <div id="fileDiv" class="row tr" style="display:none;">
+                <input type="file" class="input" id="uploadFile">
+              </div>
+              
+              <div class="row mrow">
+                <div class="w50p left">
+                  <a href="purchase" class="btn btn-grey btn-block mt-15 btn-l btn-radius"><%=LANG['LANG47']%></a>
+                </div>
+                <div class="w50p left">
+                  <a class="btn btn-primary btn-block btn-l mt-15 btn-radius" id="orderName" onclick="startOrder()"><%=LANG['LANG46']%></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <% include ./include/footer %>
+  <% include ./include/menu %>
+  <% include ./include/lengset %>
+
+
+  <div id="deposit">
+    <div id="depositbox">
+      <div id="depositinbox">
+        <div class="appmenutitle">
+          <h3 class="tx-c"><%=LANG['LANG48']%></h3>
+          <a class="close"><i class="fas fa-times"></i></a>
+        </div>
+        <div class="contbox" id="imgPath">
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="include/js/cur.js"></script>
+<script>
+  let depinfo;
+  const D_UID = "<%=D_UID%>";
+  let info;
+  $(document).ready(function () {
+    init();
+  });
+
+  async function uploadFile() {
+    return await api.ftpApi($("#uploadFile"))
+  }
+
+  async function init() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let idx = urlParams.get("idx");
+    const gubun = urlParams.get("gubun");
+    const status = urlParams.get("status");
+    const page = urlParams.get("page");
+
+    const param = {
+      D_STATUS: status,
+      CUR_PAGING: page,
+      PAGING_NO: '10',
+      T_GUBUN: gubun
+    };
+    const result = await api.listApi("/myTradeList", param);
+    result.data.forEach(element => {
+      if (element.ROW_NUNBER === idx) {
+        depinfo = element;
+        console.log(element)
+        commonLib.bindValue(element);
+        commonLib.bindValueByName("span", element);
+        
+        if (element.T_STATE === "W") {
+          $("#reciptDiv").show()
+        } else {
+          $("#fileDiv").show()
+        }
+        if(element.P_IMG_PATH !=null)
+          $("#imgPath").html('<img src="<%=IMAGE_URL%>/' + element.P_IMG_PATH + '" alt="">')
+      }
+    });
+  }
+  async function startOrder() {
+    if (depinfo.T_STATE === "W") {
+      alert("판매자가 입금확인중 입니다")
+      return
+    }
+    let uploadResult;
+    try {
+      uploadResult = await uploadFile()
+      
+    } catch (error) {
+      alert("업로드 를 진행할수 없습니다 다른 이미지를 사용해 주세요")
+    }
+    if(!uploadResult){
+      return
+    }
+    if(uploadResult.returnCode !== 0){
+      alert("<%=LANG['LANG49']%>")
+      return 
+    }
+    const param = {
+//      GUBUN: depinfo.T_STATE === "I" ? "BUY" : "SELL",
+      GUBUN: depinfo.T_GUBUN,
+      SNAME: depinfo.T_SNAME,
+      STAN_COIN: depinfo.T_STAN_SNAME,
+      SELL_KEY: depinfo.T_S_IDX,
+      BUY_KEY: depinfo.T_B_IDX,
+      FILE_PATH: uploadResult.data.fileName,
+    };
+    const result = await api.commonApi(
+      "/deposit",
+      param
+    );
+    switch (result.data.RESULT) {
+      case 0:
+        alert("<%=LANG['LANG50']%>"); 
+        
+        location.href = 'purchase'
+        break;
+      default:
+        alert("<%=LANG['LANG51']%>"); 
+        break;
+    }
+  }
+</script>

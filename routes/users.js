@@ -13,11 +13,11 @@ router.post('/signout', async (req, res, next) => {
   res.responseJson(respose);
 });
 
-router.post('/signin', async (req, res, next) => {
+router.post('/index', async (req, res, next) => {
   const param = commonLib.decryptAll(req);
   const urlName = req.url.replace('/', '');
   const respose = new Response();
-  param['inUser_IP'] = commonLib.getClientIpAddress(req);
+  param['D_IP'] = commonLib.getClientIpAddress(req);
   param['sessionID'] = req.sessionID;
   const PROCEDDATA = await sqlHelper.callProcedure(
     procedureNamse[urlName].name,
@@ -64,7 +64,7 @@ router.post('*', async (req, res, next) => {
   const param = commonLib.decryptAll(req);
   const urlName = req.url.replace('/', '');
   const respose = new Response();
-  param['inUser_IP'] = commonLib.getClientIpAddress(req);
+  param['D_IP'] = commonLib.getClientIpAddress(req);
   param['sessionID'] = req.sessionID;
   param['SESSION'] = req.sessionID;
   const PROCEDDATA = await sqlHelper.callProcedure(

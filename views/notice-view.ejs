@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  
+<% include ./include/head %>
+
+<body>
+
+  <div class="maintop subhead">
+    <% include ./include/header %>
+  </div>
+
+  <section>
+    <div class="contents">
+      <div class="maintitlebox tx-c" id = "b_type">
+        <h3><%=LANG['LANG16']%></h3>
+      </div>
+      <div class="contbox">
+        <div class="noticeviewbox">
+          <div class="noticetitle" id="b_title">
+          </div>
+          <div class="noticesubtitle" id="b_date">
+          </div>
+          <div class="noticecont" id="b_content">
+          </div>
+        </div>
+        <div class="row mt-15">
+          <div class="right">
+            <a href="/notice" class="btn btn-primary btn-radius"><%=LANG['LANG47']%></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <% include ./include/footer %>
+  <% include ./include/menu %>
+  <% include ./include/lengset %>
+
+
+
+</body>
+
+
+</html>
+
+
+<script src="include/js/cur.js"></script>
+<script>
+  $(document).ready(function () {
+    getBoard();
+  });
+
+  async function getBoard(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const idx = urlParams.get("idx");
+    const type = urlParams.get("type");
+    let param = {}
+    param['B_GUBUN'] = type
+    param['B_IDX'] = idx
+
+    const r = await api.commonApi("/boardView", param);
+    $("#b_title").html(r.data.B_TITLE)
+    $("#b_date").html(r.data.B_IDATE)
+    $("#b_content").html(r.data.B_CONTENTS)
+  }
+  
+</script>

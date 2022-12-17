@@ -3,22 +3,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>한강수 병원</title>
-  <link rel="stylesheet" href="include/css/styl.css" />
+  <link rel="stylesheet" href="css/styl.css" />
+
   <meta name="_csrf" content="<%= csrfToken %>" />
   <meta name="_publicKey" content="<%= publicKey %>" />
+  <link rel="stylesheet" href="include/css/styl.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app-compat.js"></script>
+
+  <!-- calendar -->
   <script src="include/js/jquery.min.js"></script>
   <script src="include/js/jquery-ui.min.js"></script>
   <script src="include/js/cur.js"></script>
   <script src="scripts/api.js"></script>
   <script src="scripts/commonLib.js"></script>
+
+  <script src="scripts/fullcalendar-scheduler/dist/index.global.js"></script>
+
+  <style>
+    /* body 스타일 */
+    html,
+    body {
+      overflow: hidden;
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      /* font-size: 14px; */
+    }
+    /* 캘린더 위의 해더 스타일(날짜가 있는 부분) */
+    /* .fc-header-toolbar {
+      padding-top: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+    } */
+  </style>
 </head>
 <script>
   const LOGIN = '<%=LOGIN%>';
   const LOGINALERT = "<%=typeof(LOGINALERT) === 'string'%>";
   $(window).load(function () {
     if (LOGINALERT === 'true') {
-      alert("<%=LANG['LANG214']%>");
-      location.href = '/signin';
+      /* //alert("<%=LANG['LANG214']%>"); //popup process */
+      /* // location.href = '/'; */
     }
   });
 </script>

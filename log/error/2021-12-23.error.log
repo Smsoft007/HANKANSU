@@ -1,0 +1,51 @@
+undefined | 2021-12-23 01:07:44 error: KRWClient is Null
+undefined | 2021-12-23 01:07:44 error: paramsCheck failed
+undefined | 2021-12-23 01:07:51 error: KRWClient is Null
+undefined | 2021-12-23 01:07:51 error: paramsCheck failed
+undefined | 2021-12-23 12:40:55 error: USDClient is Null
+undefined | 2021-12-23 12:40:55 error: paramsCheck failed
+undefined | 2021-12-23 13:28:06 error: executeProcedure failed : RequestError: Timeout: Request failed to complete in 15000ms
+undefined | 2021-12-23 13:28:06 error: callProcedureSync failed
+undefined | 2021-12-23 15:03:02 error: executeProcedure failed : RequestError: Incorrect syntax near '='.
+undefined | 2021-12-23 15:03:02 error: callProcedureSync failed
+undefined | 2021-12-23 15:29:27 error: Client Error is TypeError: Cannot read properties of undefined (reading 'details')
+undefined | 2021-12-23 15:29:41 error: Client Error is TypeError: Cannot read properties of undefined (reading 'details')
+undefined | 2021-12-23 15:32:11 error: Client Error is TypeError: Cannot read properties of undefined (reading 'details')
+undefined | 2021-12-23 15:32:31 error: DoTransaction Error is TypeError: Cannot read properties of undefined (reading 'details')
+undefined | 2021-12-23 15:41:55 error: DoTransaction Error is TypeError: Cannot read properties of undefined (reading 'details')
+undefined | 2021-12-23 16:26:29 error: executeProcedure failed : RequestError: Incorrect syntax near the keyword 'AS'.
+undefined | 2021-12-23 16:26:29 error: callProcedureSync failed
+undefined | 2021-12-23 16:57:39 error: executeProcedure failed : RequestError: Incorrect syntax near '하나은행,  DBO.FN_DEC(B.D_ADDR) ADDR ,  B.D_PATH,  B.D_FILENAME,   DBO.FN_DEC(D.D_ADDR) COIN_ADDR ,  C.P_IMG_PATH   FROM COIN_TRADE A'.
+undefined | 2021-12-23 16:57:39 error: callProcedureSync failed
+undefined | 2021-12-23 16:58:00 error: executeProcedure failed : RequestError: Incorrect syntax near '하나은행,  DBO.FN_DEC(B.D_ADDR) ADDR ,  B.D_PATH,  B.D_FILENAME,   DBO.FN_DEC(D.D_ADDR) COIN_ADDR ,  C.P_IMG_PATH   FROM COIN_TRADE A'.
+undefined | 2021-12-23 16:58:00 error: callProcedureSync failed
+undefined | 2021-12-23 16:58:09 error: executeProcedure failed : RequestError: Incorrect syntax near '하나은행,  DBO.FN_DEC(B.D_ADDR) ADDR ,  B.D_PATH,  B.D_FILENAME,   DBO.FN_DEC(D.D_ADDR) COIN_ADDR ,  C.P_IMG_PATH   FROM COIN_TRADE A'.
+undefined | 2021-12-23 16:58:09 error: callProcedureSync failed
+undefined | 2021-12-23 17:04:10 error: executeProcedure failed : RequestError: The column 'ADDR' was specified multiple times for 'TRAD_DATA'.
+undefined | 2021-12-23 17:04:10 error: callProcedureSync failed
+undefined | 2021-12-23 17:04:23 error: executeProcedure failed : RequestError: The column 'ADDR' was specified multiple times for 'TRAD_DATA'.
+undefined | 2021-12-23 17:04:23 error: callProcedureSync failed
+undefined | 2021-12-23 22:14:55 error: DoTransaction Error is TypeError: Cannot read properties of undefined (reading 'details')
+undefined | 2021-12-23 22:16:53 error: DoTransaction Error is TypeError: Cannot read properties of undefined (reading 'details')
+undefined | 2021-12-23 22:17:09 error: DoTransaction Error is TypeError: Cannot read properties of undefined (reading 'details')
+undefined | 2021-12-23 22:58:27 error: paramsCheck failed
+undefined | 2021-12-23 22:58:27 error: Cannot read properties of null (reading 'recordsets')
+undefined | 2021-12-23 22:58:27 error: paramsCheck failed
+undefined | 2021-12-23 22:58:27 error: Cannot read properties of null (reading 'recordsets')
+undefined | 2021-12-23 22:58:27 error: paramsCheck failed
+undefined | 2021-12-23 22:58:27 error: Cannot read properties of null (reading 'recordsets')
+undefined | 2021-12-23 22:59:52 error: executeProcedure failed : RequestError: Cannot insert the value NULL into column 'MS_DNO', table 'EX_CTAG.dbo.COIN_WALLET'; column does not allow nulls. INSERT fails.
+undefined | 2021-12-23 22:59:52 error: callProcedureSync failed
+undefined | 2021-12-23 22:59:52 error: Cannot read properties of null (reading 'recordsets')
+undefined | 2021-12-23 22:59:52 error: executeProcedure failed : RequestError: Cannot insert the value NULL into column 'MS_DNO', table 'EX_CTAG.dbo.COIN_WALLET'; column does not allow nulls. INSERT fails.
+undefined | 2021-12-23 22:59:52 error: callProcedureSync failed
+undefined | 2021-12-23 22:59:52 error: Cannot read properties of null (reading 'recordsets')
+undefined | 2021-12-23 23:01:29 error: executeProcedure failed : RequestError: Cannot insert the value NULL into column 'MS_DNO', table 'EX_CTAG.dbo.COIN_WALLET'; column does not allow nulls. INSERT fails.
+undefined | 2021-12-23 23:01:29 error: callProcedureSync failed
+undefined | 2021-12-23 23:01:29 error: Cannot read properties of null (reading 'recordsets')
+undefined | 2021-12-23 23:01:29 error: executeProcedure failed : RequestError: Cannot insert the value NULL into column 'MS_DNO', table 'EX_CTAG.dbo.COIN_WALLET'; column does not allow nulls. INSERT fails.
+undefined | 2021-12-23 23:01:29 error: callProcedureSync failed
+undefined | 2021-12-23 23:01:29 error: Cannot read properties of null (reading 'recordsets')
+undefined | 2021-12-23 23:04:38 error: executeProcedure failed : RequestError: Cannot insert the value NULL into column 'MS_DNO', table 'EX_CTAG.dbo.COIN_WALLET'; column does not allow nulls. INSERT fails.
+undefined | 2021-12-23 23:04:38 error: callProcedureSync failed
+undefined | 2021-12-23 23:04:38 error: Cannot read properties of null (reading 'recordsets')

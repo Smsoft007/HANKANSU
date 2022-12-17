@@ -1,0 +1,44 @@
+undefined | 2022-01-11 12:11:18 error: Cannot read properties of undefined (reading 'length')
+undefined | 2022-01-11 14:05:05 error: executeProcedure failed : RequestError: Incorrect syntax near the keyword 'AND'.
+undefined | 2022-01-11 14:05:05 error: callProcedureSync failed
+undefined | 2022-01-11 14:48:14 error: executeProcedure failed : RequestError: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
+undefined | 2022-01-11 14:48:14 error: callProcedureSync failed
+undefined | 2022-01-11 14:48:17 error: executeProcedure failed : RequestError: Timeout: Request failed to complete in 15000ms
+undefined | 2022-01-11 14:48:17 error: callProcedureSync failed
+undefined | 2022-01-11 14:48:25 error: executeProcedure failed : RequestError: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
+undefined | 2022-01-11 14:48:25 error: callProcedureSync failed
+undefined | 2022-01-11 14:50:01 error: executeProcedure failed : RequestError: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
+undefined | 2022-01-11 14:50:01 error: callProcedureSync failed
+undefined | 2022-01-11 14:51:57 error: executeProcedure failed : RequestError: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 1, current count = 2.
+undefined | 2022-01-11 14:51:57 error: callProcedureSync failed
+undefined | 2022-01-11 14:52:38 error: executeProcedure failed : RequestError: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 2, current count = 3.
+undefined | 2022-01-11 14:52:38 error: callProcedureSync failed
+undefined | 2022-01-11 15:12:27 error: executeProcedure failed : RequestError: Incorrect syntax near the keyword 'AND'.
+undefined | 2022-01-11 15:12:27 error: callProcedureSync failed
+undefined | 2022-01-11 17:10:21 error: create connection pool failed.. : ConnectionError: Failed to connect to 175.126.191.171:49987 in 15000ms
+undefined | 2022-01-11 17:10:40 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2022-01-11 17:10:40 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2022-01-11 17:11:43 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2022-01-11 17:11:44 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2022-01-11 17:12:01 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2022-01-11 17:12:01 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2022-01-11 17:12:05 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2022-01-11 17:12:05 error: Cannot read properties of null (reading 'recordset')
+undefined | 2022-01-11 17:12:24 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2022-01-11 17:12:24 error: Cannot read properties of null (reading 'recordset')
+undefined | 2022-01-11 17:12:39 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2022-01-11 17:12:39 error: Cannot read properties of null (reading 'recordset')
+undefined | 2022-01-11 18:39:35 error: executeProcedure failed : RequestError: Conversion failed when converting the varchar value 'admin' to data type int.
+undefined | 2022-01-11 18:39:35 error: callProcedureSync failed
+undefined | 2022-01-11 18:40:21 error: executeProcedure failed : RequestError: Conversion failed when converting the varchar value 'admin' to data type int.
+undefined | 2022-01-11 18:40:21 error: callProcedureSync failed
+undefined | 2022-01-11 19:37:58 error: executeProcedure failed : RequestError: Conversion failed when converting the nvarchar value 'admin' to data type int.
+undefined | 2022-01-11 19:37:58 error: callProcedureSync failed
+undefined | 2022-01-11 19:38:28 error: executeProcedure failed : RequestError: Conversion failed when converting the nvarchar value 'admin' to data type int.
+undefined | 2022-01-11 19:38:28 error: callProcedureSync failed
+undefined | 2022-01-11 19:46:38 error: paramsCheck failed
+undefined | 2022-01-11 21:44:45 error: Cannot read properties of undefined (reading 'length')
+undefined | 2022-01-11 21:44:50 error: Cannot read properties of undefined (reading 'length')
+undefined | 2022-01-11 23:04:08 error: Cannot read properties of undefined (reading 'length')
+undefined | 2022-01-11 23:04:40 error: Cannot read properties of undefined (reading 'length')
+undefined | 2022-01-11 23:19:29 error: DoTransaction Error is Error: Invalid TaeKcoin address

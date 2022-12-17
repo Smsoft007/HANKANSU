@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+
+<% include ./include/head %>
+
+<body>
+
+  <div class="maintop subhead signpage">
+    <% include ./include/header %>
+
+    <div class="signlogobox tx-c">
+      <div class="signlogo">
+        <img src="img/simbol-w.png" alt="">
+      </div>
+    </div>
+
+    <div class="contents pb-30">
+      <div class="signbox">
+        <h3 class="tx-bold tx-c tx-upper pb-15">login</h3>
+
+        <div class="inputbox">
+          <input type="text" class="input" name="" value="" placeholder="ID">
+        </div>
+        <div class="inputbox">
+          <div class="row">
+            <div class="w20p left">
+              <select class="select" name="">
+                <option value="">국가</option>
+                <option value="">한국(+82)</option>
+                <option value="">中国(+86)</option>
+                <option value="">日本(+81)</option>
+                <option value="">UNITED STATES(+1)</option>
+              </select>
+            </div>
+            <div class="w80p left">
+              <div class="inputbtnbox">
+                <input type="number" class="input" name="" value="" placeholder="phone number">
+                <a href="#" class="btn btn-primary"><%=LANG['LANG52']%></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inputbox">
+          <div class="inputbtnbox">
+            <input type="text" class="input" name="" value="" placeholder="Authentication number">
+            <p class="tx-red tx-bold">5:00</p>
+          </div>
+        </div>
+        <div class="inputbox">
+          <input type="password" class="input" name="" value="" placeholder="Password">
+          <p class="tx-guide"><%=LANG['LANG53']%></p>
+        </div>
+        <div class="inputbox">
+          <input type="password" class="input" name="" value="" placeholder="Confirm Password">
+          <p class="tx-error"><%=LANG['LANG54']%></p>
+        </div>
+        <a class="btn btn-primary btn-block mt-15 btn-l btn-radius"><%=LANG['LANG55']%></a>
+        <a href="signin.html" class="btn btn-grey btn-block mt-5 btn-l btn-radius"><%=LANG['LANG56']%></a>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <% include ./include/footer %>
+  <% include ./include/menu %>
+  <% include ./include/lengset %>
+
+
+</body>
+
+
+</html>
+
+
+<script src="include/js/cur.js"></script>

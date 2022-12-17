@@ -1,0 +1,16 @@
+undefined | 2022-01-17 11:10:17 error: executeProcedure failed : RequestError: Procedure or function 'SP_MY_TRADE_LIST' expects parameter '@CUR_PAGING', which was not supplied.
+undefined | 2022-01-17 11:10:17 error: callProcedureSync failed
+undefined | 2022-01-17 11:10:30 error: executeProcedure failed : RequestError: Procedure or function 'SP_MY_TRADE_LIST' expects parameter '@CUR_PAGING', which was not supplied.
+undefined | 2022-01-17 11:10:30 error: callProcedureSync failed
+undefined | 2022-01-17 11:16:00 error: executeProcedure failed : RequestError: Procedure or function 'SP_MY_TRADE_LIST' expects parameter '@CUR_PAGING', which was not supplied.
+undefined | 2022-01-17 11:16:00 error: callProcedureSync failed
+undefined | 2022-01-17 11:18:17 error: executeProcedure failed : RequestError: Procedure or function 'SP_MY_TRADE_LIST' expects parameter '@CUR_PAGING', which was not supplied.
+undefined | 2022-01-17 11:18:17 error: callProcedureSync failed
+undefined | 2022-01-17 14:29:13 error: BTC createCoinAddress failed : Error: ETIMEDOUT
+undefined | 2022-01-17 14:29:13 error: paramsCheck failed
+undefined | 2022-01-17 14:30:37 error: BTC createCoinAddress failed : Error: ETIMEDOUT
+undefined | 2022-01-17 14:30:37 error: paramsCheck failed
+undefined | 2022-01-17 14:33:07 error: BTC createCoinAddress failed : Error: ETIMEDOUT
+undefined | 2022-01-17 14:33:07 error: paramsCheck failed
+undefined | 2022-01-17 16:48:57 error: LTCClient is Null
+undefined | 2022-01-17 16:48:57 error: paramsCheck failed

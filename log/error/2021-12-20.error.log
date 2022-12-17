@@ -1,0 +1,5 @@
+undefined | 2021-12-20 20:46:06 error: create connection pool failed.. : ConnectionError: Failed to connect to 175.126.191.171:49987 in 15000ms
+undefined | 2021-12-20 20:49:25 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2021-12-20 20:49:25 error: Cannot read properties of null (reading 'recordset')
+undefined | 2021-12-20 20:49:26 error: getRequest failed : TypeError: Cannot read properties of null (reading 'request')
+undefined | 2021-12-20 20:49:26 error: Cannot read properties of null (reading 'recordset')

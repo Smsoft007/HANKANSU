@@ -1,0 +1,12 @@
+undefined | 2022-01-05 09:40:51 error: DoTransaction Error is Error: Invalid TaeKcoin address
+undefined | 2022-01-05 09:40:51 error: Cannot read properties of null (reading 'txid')
+undefined | 2022-01-05 09:58:57 error: DoTransaction Error is Error: Invalid TaeKcoin address
+undefined | 2022-01-05 09:58:57 error: Cannot read properties of null (reading 'txid')
+undefined | 2022-01-05 10:27:21 error: DoTransaction Error is Error: Invalid TaeKcoin address
+undefined | 2022-01-05 14:16:05 error: executeProcedure failed : RequestError: Incorrect syntax near the keyword 'AND'.
+undefined | 2022-01-05 14:16:05 error: callProcedureSync failed
+undefined | 2022-01-05 14:33:41 error: executeProcedure failed : RequestError: Timeout: Request failed to complete in 15000ms
+undefined | 2022-01-05 14:33:41 error: callProcedureSync failed
+undefined | 2022-01-05 15:54:04 error: executeProcedure failed : RequestError: Incorrect syntax near the keyword 'AND'.
+undefined | 2022-01-05 15:54:04 error: callProcedureSync failed
+undefined | 2022-01-05 18:57:22 error: create connection pool failed.. : ConnectionError: Failed to connect to 175.126.191.171:49987 in 15000ms

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+
+<% include ./include/head %>
+
+<body>
+
+  <div class="maintop subhead">
+    <% include ./include/header %>
+  </div>
+
+  <section>
+    <div class="contents">
+      <div class="maintitlebox tx-c">
+        <h3><%=LANG["LANG17"] %></h3>
+      </div>
+      <div class="contbox">
+        <div class="form800box">
+          <div class="inputbox">
+            <input type="text" class="input" id="B_TITLE" placeholder="<%=LANG["LANG58"] %>">
+          </div>
+          <div class="row mrow">
+            <div class="w50p left">
+              <div class="inputbox">
+                <input type="text" class="input" id="B_UID" readonly>
+              </div>
+            </div>
+            <div class="w50p left">
+              <div class="inputbox">
+                <input type="text" class="input" id="today" readonly>
+              </div>
+            </div>
+          </div>
+          <div class="inputbox">
+            <textarea name="name" class="textarea" id = "B_CONTENTS" placeholder="<%=LANG["LANG78"] %>"></textarea> 
+          </div>
+          <div class="row mrow">
+            <div class="w50p left">
+              <a href="/inquiry" class="btn btn-grey btn-radius btn-block"><%=LANG["LANG47"] %></a>
+            </div>
+            <div class="w50p left">
+              <a class="btn btn-primary btn-radius btn-block" onclick="writeBoard()"><%=LANG["LANG79"] %></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <% include ./include/footer %>
+  <% include ./include/menu %>
+  <% include ./include/lengset %>
+
+</body>
+</html>
+<script src="include/js/cur.js"></script>
+<script>
+  const D_UID = "<%=D_UID%>";
+  const today = new Date().toISOString().substring(0, 10);
+  $("#today").val(today)
+  $("#B_UID").val(D_UID)
+  async function writeBoard(){
+    let param = {}
+    param['B_UID'] = D_UID
+    param['B_TITLE'] = $("#B_TITLE").val()
+    param['B_CONTENTS'] = $("#B_CONTENTS").val()
+    param['B_GUBUN'] = "USER"
+    param['B_FILE_PATH1'] = " "
+    param['B_FILE_PATH2'] = " "
+    param['B_FILE_PATH3'] = " "
+    param['B_FILE_PATH4'] = " "
+    param['B_FILE_PATH5'] = " "
+
+    if (commonLib.nullCheck(param)) {
+      alert("<%=LANG['LANG80'] %>")
+      return
+    }
+
+    const r = await api.commonApi("/writeBoard", param);
+    if (r.data.RESULT === 0) {
+      alert("<%=LANG['LANG81'] %>")
+      location.href = "/inquiry"
+    } else {
+      alert("<%=LANG['LANG82'] %>")
+    }
+  }
+</script>
