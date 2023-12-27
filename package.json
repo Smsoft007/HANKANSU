@@ -8,7 +8,7 @@
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.0",
     "app-root-path": "^3.0.0",
-    "axios": "^0.24.0",
+    "axios": "^1.6.3",
     "bitcoin": "^3.0.1",
     "connect-redis": "^6.0.0",
     "cookie-parser": "~1.4.4",
