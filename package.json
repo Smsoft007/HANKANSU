@@ -6,7 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
-    "@google-cloud/local-auth": "^2.1.0",
+    "@google-cloud/local-auth": "^3.0.0",
     "app-root-path": "^3.0.0",
     "axios": "^0.24.0",
     "bitcoin": "^3.0.1",
@@ -28,7 +28,7 @@
     "fs": "0.0.1-security",
     "ftp": "^0.3.10",
     "fullcalendar-scheduler": "^6.0.0",
-    "googleapis": "^105.0.0",
+    "googleapis": "^124.0.0",
     "googletrans": "^1.0.3",
     "http": "0.0.1-security",
     "http-errors": "~1.6.3",
